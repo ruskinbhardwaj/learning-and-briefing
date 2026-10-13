@@ -1,0 +1,22 @@
+name: Ask a question
+description: Ask something an article didn't answer. The answer goes into its FAQ.
+title: "Question: "
+labels: ["faq"]
+body:
+  - type: input
+    id: article
+    attributes:
+      label: Article URL
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context (optional)
+      description: What prompted it, or what you already know.

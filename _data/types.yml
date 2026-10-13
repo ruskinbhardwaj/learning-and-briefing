@@ -1,0 +1,17 @@
+# Article types. `id` goes in front matter as `type:`; review windows live in
+# _config.yml under `review_days`. See principles/structure.md.
+- id: learning
+  name: Learning
+  plural: Learning
+  page: /learning/
+  summary: Evergreen explainers on how something works and why it matters.
+- id: briefing
+  name: Briefing
+  plural: Briefings
+  page: /briefings/
+  summary: A dated deep-dive on one recent development and what it changes.
+- id: morning
+  name: Morning briefing
+  plural: Morning briefings
+  page: /morning/
+  summary: A short daily roundup of what changed across all topics.

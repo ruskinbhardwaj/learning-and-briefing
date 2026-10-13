@@ -1,0 +1,32 @@
+# The topic list. `id` is used in article front matter (`topics: [id]`) and in
+# the topic page URL (/topics/<id>/). See principles/topics.md for scope.
+- id: autonomous-sdlc
+  name: Autonomous SDLC
+  summary: >-
+    AI agents across the software lifecycle: planning, coding, review, testing,
+    deployment and operations, and what changes for the teams around them.
+- id: ai-native-operating-models
+  name: AI-native operating models
+  summary: >-
+    How companies are decomposing the problem of becoming AI-native: org design,
+    workflows, decision rights, data, and the flywheels that compound.
+- id: products-and-companies
+  name: Products & companies
+  summary: >-
+    What is shipping and who is building it: products, business models,
+    funding and partnerships, and where each piece fits in the stack.
+- id: geopolitics
+  name: Geopolitics
+  summary: >-
+    Export controls, sovereignty, regulation, and the competition between
+    nations and blocs over AI capability and supply chains.
+- id: enabling-tech
+  name: Enabling tech
+  summary: >-
+    Chips, energy, datacenters, distributed ledgers and other technologies that
+    constrain or accelerate everything above them.
+- id: humans-and-ai
+  name: Humans & AI
+  summary: >-
+    AI's impact on fields like mathematics and science, and the roles people
+    are likely to play alongside increasingly capable systems.

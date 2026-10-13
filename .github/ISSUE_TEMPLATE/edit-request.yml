@@ -1,0 +1,35 @@
+name: Suggest an edit
+description: Correct, update or improve an article.
+title: "Edit: "
+labels: ["edit-request"]
+body:
+  - type: input
+    id: article
+    attributes:
+      label: Article URL
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of edit?
+      options:
+        - Factual correction
+        - Out of date
+        - Unclear or confusing
+        - Missing something
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What should change?
+      description: Quote the passage if you can, and say what it should say instead.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources (optional)
+      description: Links that support the change.

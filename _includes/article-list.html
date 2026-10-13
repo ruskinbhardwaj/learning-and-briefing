@@ -1,0 +1,29 @@
+{%- comment -%}
+Lists articles newest first, grouped by month.
+Usage: {% include article-list.html posts=site.posts %}
+{%- endcomment -%}
+{%- if include.posts.size == 0 -%}
+<p class="empty">Nothing published here yet.</p>
+{%- else -%}
+{%- assign months = include.posts | group_by_exp: "p", "p.date | date: '%B %Y'" -%}
+{%- for month in months -%}
+<h2 class="month">{{ month.name }}</h2>
+<ul class="article-list">
+  {%- for p in month.items -%}
+  {%- include review.html post=p -%}
+  <li>
+    <time datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: "%d %b" }}</time>
+    <div>
+      <a class="title" href="{{ p.url | relative_url }}">{{ p.title }}</a>
+      <span class="meta">
+        {% include type-badge.html type=review_type %}
+        {% include topic-tags.html topics=p.topics %}
+        <span class="stale-tag" data-review-by="{{ review_by }}"{% unless stale %} hidden{% endunless %}>May be out of date</span>
+      </span>
+      {%- if p.summary %}<p class="summary">{{ p.summary }}</p>{% endif -%}
+    </div>
+  </li>
+  {%- endfor -%}
+</ul>
+{%- endfor -%}
+{%- endif -%}
