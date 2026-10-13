@@ -11,7 +11,7 @@ Runs every weekday morning. Each run:
 3. Picks three to seven items that pass the editorial bar, most important first. A quiet day gets a short briefing; it never pads.
 4. Writes `_posts/YYYY-MM-DD-morning-briefing.md` from [templates/morning.md](templates/morning.md).
 5. Runs the pre-publish checklist in [editorial.md](editorial.md) and builds the site.
-6. Opens a pull request titled "Morning briefing: D Month YYYY" and, if set to auto-publish, merges it once the build passes.
+6. Opens a pull request titled "Morning briefing: D Month YYYY" and requests Addy's review. It is never merged automatically: Addy reviews and merges it.
 7. Notes any item that deserves its own Briefing as an `article-request` issue.
 
 ## Other runs
