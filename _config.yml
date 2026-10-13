@@ -1,0 +1,49 @@
+title: Learning & Briefing
+description: >-
+  Explainers and dated briefings on autonomous software delivery, AI-native
+  companies, and the products, geopolitics and infrastructure shaping them.
+url: https://ruskinbhardwaj.github.io
+baseurl: /learning-and-briefing
+repo: ruskinbhardwaj/learning-and-briefing
+timezone: UTC
+permalink: /:year/:month/:day/:title/
+
+# Site machinery lives in site/ so the repo top level stays articles and principles.
+layouts_dir: site/_layouts
+includes_dir: site/_includes
+data_dir: site/_data
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# How many days after `last_reviewed` an article is flagged as possibly stale.
+# An article can override this with its own `review_days`.
+review_days:
+  learning: 365
+  briefing: 90
+  morning: 7
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: article
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - principles
+  - CLAUDE.md
+  - README.md
+  - site/Gemfile
+  - site/Gemfile.lock
+  - vendor
+  - .github

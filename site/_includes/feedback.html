@@ -1,0 +1,10 @@
+{%- capture article_url %}{{ page.url | absolute_url }}{% endcapture -%}
+{%- capture issues %}https://github.com/{{ site.repo }}/issues/new{% endcapture -%}
+<section class="feedback" id="feedback">
+  <h2>Read it? Send feedback</h2>
+  <p>Spotted something wrong, out of date or unclear? Have a question it didn't answer? Answers are added to the FAQ above and changes are logged under Updates.</p>
+  <p class="actions">
+    <a class="button" href="{{ issues }}?template=edit-request.yml&amp;title={{ 'Edit: ' | append: page.title | url_encode }}&amp;article={{ article_url | url_encode }}">Suggest an edit</a>
+    <a class="button" href="{{ issues }}?template=question.yml&amp;title={{ 'Question: ' | append: page.title | url_encode }}&amp;article={{ article_url | url_encode }}">Ask a question</a>
+  </p>
+</section>

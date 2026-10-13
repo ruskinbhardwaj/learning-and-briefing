@@ -1,0 +1,13 @@
+{%- comment -%}
+Computes the review state of an article. Sets, for the caller:
+  review_type, reviewed (date), review_by (YYYY-MM-DD), stale (true/false)
+Usage: {% include review.html post=page %}
+{%- endcomment -%}
+{%- assign review_type = include.post.type | default: "briefing" -%}
+{%- assign review_days = include.post.review_days | default: site.review_days[review_type] | default: 90 -%}
+{%- assign reviewed = include.post.last_reviewed | default: include.post.date -%}
+{%- assign reviewed_s = reviewed | date: "%s" | plus: 0 -%}
+{%- assign review_by_s = review_days | times: 86400 | plus: reviewed_s -%}
+{%- assign review_by = review_by_s | date: "%Y-%m-%d" -%}
+{%- assign now_s = site.time | date: "%s" | plus: 0 -%}
+{%- if now_s > review_by_s -%}{%- assign stale = true -%}{%- else -%}{%- assign stale = false -%}{%- endif -%}

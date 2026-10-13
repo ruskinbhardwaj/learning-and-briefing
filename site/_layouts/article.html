@@ -1,0 +1,67 @@
+---
+layout: default
+---
+{%- include review.html post=page -%}
+<article class="article">
+  <header>
+    <p class="kicker">
+      {% include type-badge.html type=review_type %}
+      {% include topic-tags.html topics=page.topics %}
+    </p>
+    <h1>{{ page.title }}</h1>
+    {%- if page.summary %}<p class="lede">{{ page.summary }}</p>{% endif %}
+    <dl class="dates">
+      <div><dt>Published</dt><dd><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time></dd></div>
+      <div><dt>Last reviewed</dt><dd><time>{{ reviewed | date: "%-d %B %Y" }}</time></dd></div>
+      <div><dt>Review by</dt><dd><time>{{ review_by | date: "%-d %B %Y" }}</time></dd></div>
+    </dl>
+    {%- if page.superseded_by %}
+    <div class="banner banner-superseded">A newer article covers this: <a href="{{ page.superseded_by | relative_url }}">read the update</a>.</div>
+    {%- endif %}
+    <div class="banner banner-stale" data-review-by="{{ review_by }}"{% unless stale %} hidden{% endunless %}>
+      This was last reviewed on {{ reviewed | date: "%-d %B %Y" }} and may be out of date.
+      <a href="#feedback">Ask for a refresh</a>.
+    </div>
+  </header>
+
+  <div class="content">
+    {{ content }}
+  </div>
+
+  {%- if page.faq.size > 0 %}
+  <section id="faq">
+    <h2>FAQ</h2>
+    {%- for item in page.faq %}
+    <details>
+      <summary>{{ item.q }}</summary>
+      {{ item.a | markdownify }}
+      {%- if item.date %}<p class="meta">Added {{ item.date | date: "%-d %B %Y" }}</p>{% endif %}
+    </details>
+    {%- endfor %}
+  </section>
+  {%- endif %}
+
+  {%- if page.sources.size > 0 %}
+  <section id="sources">
+    <h2>Sources</h2>
+    <ol class="sources">
+      {%- for s in page.sources %}
+      <li><a href="{{ s.url }}">{{ s.title }}</a>{% if s.publisher %}, {{ s.publisher }}{% endif %}{% if s.date %} ({{ s.date | date: "%-d %b %Y" }}){% endif %}</li>
+      {%- endfor %}
+    </ol>
+  </section>
+  {%- endif %}
+
+  {%- if page.updates.size > 0 %}
+  <section id="updates">
+    <h2>Updates</h2>
+    <ul class="updates">
+      {%- for u in page.updates %}
+      <li><time>{{ u.date | date: "%-d %b %Y" }}</time> {{ u.note | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>
+      {%- endfor %}
+    </ul>
+  </section>
+  {%- endif %}
+
+  {% include feedback.html %}
+</article>

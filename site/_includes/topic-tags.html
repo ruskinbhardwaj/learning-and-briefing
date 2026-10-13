@@ -1,0 +1,4 @@
+{%- for id in include.topics -%}
+{%- assign topic = site.data.topics | where: "id", id | first -%}
+<a class="topic-tag" href="{{ '/topics/' | append: id | append: '/' | relative_url }}">{{ topic.name | default: id }}</a>
+{%- endfor -%}
