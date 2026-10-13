@@ -1,5 +1,6 @@
 ---
 title: Latest
+permalink: /
 ---
 # Latest
 

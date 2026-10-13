@@ -12,6 +12,6 @@ Read `principles/README.md` and follow every file it links. They are the rules f
 - Never rename a published post file.
 - Edits to published articles add a dated `updates` entry; reader questions go in `faq`. See `principles/feedback.md`.
 - Move `last_reviewed` only after re-checking every claim.
-- Update `landscape.md` when an article changes the big picture.
-- Build before opening a PR: `bundle install && bundle exec jekyll build`.
+- Update `site/pages/landscape.md` when an article changes the big picture.
+- Build before opening a PR: `BUNDLE_GEMFILE=site/Gemfile bundle install && BUNDLE_GEMFILE=site/Gemfile bundle exec jekyll build`.
 - One article (or one feedback fix) per pull request.

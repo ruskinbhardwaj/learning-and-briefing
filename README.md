@@ -8,13 +8,11 @@ Dated learning articles and briefings on autonomous software delivery, AI-native
 
 | Path | What |
 |---|---|
-| `_posts/` | Articles, named `YYYY-MM-DD-slug.md` |
-| `principles/` | The rules every article follows: writing, editorial, structure, topics, feedback, automation, templates |
-| `landscape.md` | The big-picture map of how the topics fit together |
-| `_data/topics.yml`, `_data/types.yml` | Topic and article-type lists |
-| `_layouts/`, `_includes/`, `assets/` | Site templates and styles |
-| `.github/ISSUE_TEMPLATE/` | Forms for edit requests, questions and article requests |
-| `.github/workflows/pages.yml` | Builds on PRs; builds and deploys on `main` and daily |
+| [`_posts/`](_posts/) | **The articles**, named `YYYY-MM-DD-slug.md`, newest at the bottom |
+| [`principles/`](principles/) | The rules every article follows: writing, editorial, structure, topics, feedback, automation, templates |
+| [`site/`](site/) | Everything that turns the articles into the website: pages (home, archive, topics, landscape), layouts, styles, topic and type lists |
+| `.github/` | Feedback forms and the workflow that builds and publishes the site |
+| `_config.yml` | Site settings (has to stay at the top level) |
 
 ## Feedback
 
@@ -25,6 +23,7 @@ Every article ends with **Suggest an edit** and **Ask a question** links that op
 Not needed to read or publish: GitHub builds the site on every merge. Only useful for previewing changes offline.
 
 ```sh
+export BUNDLE_GEMFILE=site/Gemfile
 bundle install
 bundle exec jekyll serve
 ```

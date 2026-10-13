@@ -1,8 +1,8 @@
 # Topics
 
-Every article has one **primary** topic (listed first in `topics:`) and up to two secondary ones. The canonical list lives in `_data/topics.yml`; this file explains the scope.
+Every article has one **primary** topic (listed first in `topics:`) and up to two secondary ones. The canonical list lives in `site/_data/topics.yml`; this file explains the scope.
 
-The [Landscape](../landscape.md) page shows how the topics stack together. When an article changes the picture, update the Landscape page in the same pull request.
+The [Landscape](../site/pages/landscape.md) page shows how the topics stack together. When an article changes the picture, update the Landscape page in the same pull request.
 
 ## Autonomous SDLC (`autonomous-sdlc`)
 
@@ -49,7 +49,7 @@ AI's impact on fields like mathematics and science, and the roles people are lik
 
 ## Adding or changing a topic
 
-1. Add an entry to `_data/topics.yml` (`id`, `name`, `summary`).
-2. Add `topics/<id>.md` with `layout: topic` and `topic: <id>`.
+1. Add an entry to `site/_data/topics.yml` (`id`, `name`, `summary`).
+2. Add `site/pages/topics/<id>.md` with `layout: topic`, `topic: <id>` and `permalink: /topics/<id>/`.
 3. Add a section to this file and a layer or note on the Landscape page.
 4. Renaming an `id` breaks links; prefer changing `name` instead.

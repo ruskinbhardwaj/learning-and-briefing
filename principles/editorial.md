@@ -45,4 +45,4 @@
 - [ ] No relative dates; numbers have units and sources.
 - [ ] "How it fits" links to the Landscape or related articles; Landscape updated if the picture changed.
 - [ ] Within the length range.
-- [ ] Site builds (`bundle exec jekyll build`) and the article renders.
+- [ ] Site builds (the PR build check passes) and the article renders.

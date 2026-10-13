@@ -8,6 +8,11 @@ repo: ruskinbhardwaj/learning-and-briefing
 timezone: UTC
 permalink: /:year/:month/:day/:title/
 
+# Site machinery lives in site/ so the repo top level stays articles and principles.
+layouts_dir: site/_layouts
+includes_dir: site/_includes
+data_dir: site/_data
+
 markdown: kramdown
 kramdown:
   input: GFM
@@ -38,7 +43,7 @@ exclude:
   - principles
   - CLAUDE.md
   - README.md
-  - Gemfile
-  - Gemfile.lock
+  - site/Gemfile
+  - site/Gemfile.lock
   - vendor
   - .github
