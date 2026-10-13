@@ -20,7 +20,9 @@ Dated learning articles and briefings on autonomous software delivery, AI-native
 
 Every article ends with **Suggest an edit** and **Ask a question** links that open a pre-filled issue. See `principles/feedback.md` for what happens next.
 
-## Run locally
+## Preview locally (optional)
+
+Not needed to read or publish: GitHub builds the site on every merge. Only useful for previewing changes offline.
 
 ```sh
 bundle install
