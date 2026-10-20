@@ -1,0 +1,20 @@
+name: Request an article
+description: Ask for a new learning article or briefing.
+title: "Article: "
+labels: ["article-request"]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - Learning (evergreen explainer)
+        - Briefing (one recent development)
+    validations:
+      required: true
+  - type: textarea
+    id: subject
+    attributes:
+      label: What should it cover?
+    validations:
+      required: true

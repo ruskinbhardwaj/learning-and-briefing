@@ -1,0 +1,2 @@
+{%- assign t = site.data.types | where: "id", include.type | first -%}
+<span class="badge badge-{{ include.type }}">{{ t.name | default: include.type }}</span>

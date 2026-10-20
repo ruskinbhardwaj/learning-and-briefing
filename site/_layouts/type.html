@@ -1,0 +1,9 @@
+---
+layout: default
+---
+{%- assign t = site.data.types | where: "id", page.article_type | first -%}
+{%- assign posts = site.posts | where: "type", page.article_type -%}
+<h1>{{ t.plural }}</h1>
+<p class="lede">{{ t.summary }} Flagged as possibly out of date {{ site.review_days[page.article_type] }} days after last review.</p>
+{{ content }}
+{% include article-list.html posts=posts %}
