@@ -15,11 +15,22 @@ These files are the rules for every article on this site. Whoever writes or edit
 ## How an article gets made
 
 1. **Pick the type and topic.** Use [structure.md](structure.md) to choose Learning, Briefing or Morning, and [topics.md](topics.md) to choose one primary topic (plus any secondary ones).
-2. **Research.** Gather sources to the standard in [editorial.md](editorial.md). Note each source's publication date.
-3. **Draft from the template.** Start from the matching file in [templates/](templates/) and follow [writing.md](writing.md).
-4. **Check.** Run through the pre-publish checklist at the end of [editorial.md](editorial.md).
-5. **Publish.** Commit the file to `_posts/` via a pull request. The site rebuilds on merge.
-6. **Maintain.** Feedback arrives as issues and is handled per [feedback.md](feedback.md). Articles past their review date are refreshed or superseded per [editorial.md](editorial.md).
+2. **Talk it through first (Learning articles).** Before writing a Learning article, have a conversation with Addy about the topic in the project thread (or the article-request issue). See [Conversation first](#conversation-first) below. Don't draft or open a pull request until Addy says to write it.
+3. **Research.** Gather sources to the standard in [editorial.md](editorial.md). Note each source's publication date.
+4. **Draft from the template.** Start from the matching file in [templates/](templates/) and follow [writing.md](writing.md).
+5. **Check.** Run through the pre-publish checklist at the end of [editorial.md](editorial.md).
+6. **Publish.** Commit the file to `_posts/` via a pull request. The site rebuilds on merge.
+7. **Maintain.** Feedback arrives as issues and is handled per [feedback.md](feedback.md). Articles past their review date are refreshed or superseded per [editorial.md](editorial.md).
+
+## Conversation first
+
+A Learning article is the record of something Addy has learned, so it starts as a conversation, not a finished piece. Before writing one:
+
+- Open with a short plain explanation of the topic, then ask what Addy already knows, what they want to use it for, and how deep to go.
+- Answer Addy's questions in the thread. The questions they ask show the angle, depth and examples the article needs.
+- Draft only when Addy says to. The article then follows the angle the conversation settled on, and questions that came up become body sections or `faq` entries.
+
+Briefings and morning briefings report on recent developments and don't need a conversation first, unless Addy asks for one.
 
 ## The reader
 
