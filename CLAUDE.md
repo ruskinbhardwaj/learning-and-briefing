@@ -8,6 +8,7 @@ Read `principles/README.md` and follow every file it links. They are the rules f
 
 ## Working rules
 
+- Learning articles start with a conversation with Addy, not a draft. Write one only once Addy says to. See "Conversation first" in `principles/README.md`.
 - Articles go in `_posts/YYYY-MM-DD-slug.md`, started from `principles/templates/`.
 - Never rename a published post file.
 - Edits to published articles add a dated `updates` entry; reader questions go in `faq`. See `principles/feedback.md`.
