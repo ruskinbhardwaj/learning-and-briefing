@@ -1,7 +1,7 @@
 ---
 title: "Morning briefing: 11 November 2026"
 type: morning
-topics: [products-and-companies, autonomous-sdlc, enabling-tech]
+topics: [products-and-companies, ai-native-operating-models, enabling-tech]
 summary: >-
   Anthropic set its IPO price range at $70 to $78 a share, with trading planned
   for 19 November, and launched office tools that knocked Microsoft's shares,
@@ -61,7 +61,7 @@ The headline valuation depends on what you count:
 **Why it matters:** the range lands roughly where buyers were pushing last week, below the $1.5 trillion discussed in October but above the last private round, so the company chose to go ahead at a lower price rather than wait. The suppliers' $26 billion order is a vote of confidence, and also a sign of how tightly chip and cloud companies are bound to their biggest customers: they sell Anthropic compute and now buy its shares. The final price on 18 November will show how much demand there really is.
 
 ### Anthropic launched office tools, and Microsoft's shares fell
-<span class="meta">Autonomous SDLC</span>
+<span class="meta">AI-native operating models</span>
 
 On 10 November Anthropic announced Claude Sheets, a spreadsheet that users build together with Claude, Claude Whiteboards, and Claude Data, which builds dashboards from tools such as Snowflake and Salesforce ([OfficeChai](https://officechai.com/ai/microsoft-stock-drops-3-after-anthropic-announces-claude-sheets-and-claude-data/)). Microsoft's shares fell as much as 3% during the day, a move CNBC tied to the announcement ([Stock Titan, citing CNBC](https://www.stocktitan.net/articles/stock-market-today-live-november-10-2026)).
 
